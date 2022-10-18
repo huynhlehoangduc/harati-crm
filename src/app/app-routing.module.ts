@@ -9,7 +9,18 @@ const routes: Routes = [
     path: '',
     title: 'Admin',
     component: AdminComponent,
-    children: []
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'employee'
+      },
+      {
+        path: 'employee',
+        title: 'Employee',
+        loadComponent: () => import('./pages/employee/employee.component').then(mod => mod.EmployeeComponent)
+      },
+    ],
   },
   {
     path: 'auth',

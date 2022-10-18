@@ -3,7 +3,7 @@
   <button mat-icon-button (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>Mini CRM</span>
+  <a class="ml-8 text-white no-underline hover:underline" routerLink="/">Mini CRM</a>
   <div class="flex-1"></div>
   <button mat-icon-button  [matMenuTriggerFor]="appMenu">
     <mat-icon>person</mat-icon>
@@ -19,12 +19,13 @@
 <!-- Draw and container-->
 <mat-drawer-container class="app-container" autosize>
   <mat-drawer #drawer class="w-[300px]" mode="side" opened>
-    <p>Auto-resizing sidenav</p>
+    <ul>
+      <li><a routerLink="/employee">Nhân viên</a></li>
+    </ul>
   </mat-drawer>
 
-  <div class="app-sidenav-content">
+  <div class="p-4">
     <router-outlet></router-outlet>
-    Content
   </div>
 
 </mat-drawer-container>
