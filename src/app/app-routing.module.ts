@@ -7,6 +7,7 @@ import {ErrorsComponent} from "./components/templates/errors/errors.component";
 const routes: Routes = [
   {
     path: '',
+    title: 'Admin',
     component: AdminComponent,
     children: []
   },
@@ -17,6 +18,7 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: 'login',
+        title: 'Login',
         pathMatch: 'full'
       },
       {
@@ -27,6 +29,7 @@ const routes: Routes = [
   },
   {
     path: 'error',
+    title: 'Error',
     component: ErrorsComponent,
     children: []
   },
